@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
         hostname: 'placehold.co',
       }
     ]
+  },
+  experimental: {
+  //  ppr: 'incremental',
+  },
+  devIndicators: {
+    position: 'bottom-left',
   }
 };
 
