@@ -50,3 +50,4 @@ export const STARTUP_BY_ID_QUERY = defineQuery
         bio,
     }`);
     
+    
