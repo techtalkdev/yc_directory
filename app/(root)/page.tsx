@@ -1,3 +1,4 @@
+import { auth } from '@/auth';
 import SearchForm from '@/components/SearchForm'
 import StartupCard, { StartupTypeCard } from '@/components/StartupCard';
 import { sanityFetch, SanityLive } from '@/sanity/lib/live';
@@ -12,6 +13,10 @@ const Home = async ({ searchParams }:{ searchParams: Promise<{ query?: string}>}
 
   const { data: posts } = await sanityFetch({ query: STARTUP_QUERY, params });
 
+  const session = await auth();
+
+  console.log(session?.id);
+  
   return (
     <>
     <section className='pink_container'>
